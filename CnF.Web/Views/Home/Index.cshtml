@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row   container  ">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+
+        @{
+            var coming = Session["coming"] as List<string>;
+        }
+
+
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-envelope-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Upcoming Order</span>
+                <span class="info-box-number">@coming.Count    </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+
+        @{
+            var active = Session["active"] as List<string>;
+        }
+
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Active Order</span>
+                <span class="info-box-number">@active.Count </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        @{
+            var done = Session["done"] as List<string>;
+        }
+        <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Complete Order</span>
+                <span class="info-box-number">@done.Count  </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        @{
+            var widget = ViewBag.widget as CnF.Domain.ViewModels.WidgetViewModel;
+        }
+
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Total Amount</span>
+                <span class="info-box-number">@widget.Amount  </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->
+
+
+
+
+
+
+
+<div class="container">
+    <!--<div class="jumbotron text-center"> -->
+    <!-- image moving class carousel -->
+    <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="2000" style="width: 800px; margin: 0 auto">
+        <ol class="carousel-indicators">
+            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycarousel" data-slide-to="1"></li>
+            <li data-target="#mycarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" width="800" height="400">
+            <div class="item active">
+
+                <img src="~/Content/AdminLTE/dist/img/pk1.jpg"  style="width:800px ;height:400px;" />
+                <div class="carousel-caption">
+                    <h1>Water Blue</h1>
+                </div>
+            </div>
+            <div class="item">
+                
+                <img src="~/Content/AdminLTE/dist/img/pk2.jpg" style="width:800px ;height:400px;"  />
+                <div class="carousel-caption">
+                    <h1>Dragon</h1>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Content/AdminLTE/dist/img/pk3.jpg"  style="width:800px ;height:400px;" />
+                <div class="carousel-caption">
+                    <h1>Sea Fish</h1>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+    </div>
+</div> 

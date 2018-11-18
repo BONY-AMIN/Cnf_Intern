@@ -1,0 +1,53 @@
+﻿@model CnF.Domain.ViewModels.BillingStatusViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_adminView.cshtml";
+}
+
+<button onclick="myFunction()">Bill</button>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+<div>
+
+    <h1 style="color:forestgreen;text-align: center  " > Amin Shipping Line</h1>
+    <p style="text-align:center ;color:black  "><b>Corporate office:</b>  Road#3F,Sector#09,Uttara Dhaka-1230</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+    </dl>
+</div>
+
+<hr />
+<div >
+
+<h3 style=" margin-left:100px;margin-top:200px ">  <b><u>Athorized</u></b></h3>
+</div> 

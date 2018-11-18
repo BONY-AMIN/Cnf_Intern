@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a3a7dc6336a244afb654cd2e4526809e" Name="Diagram1">
+        <EntityTypeShape EntityType="CnFModel.AspNetRole" Width="1.5" PointX="9.875" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.AspNetUserClaim" Width="1.5" PointX="4.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.AspNetUserLogin" Width="1.5" PointX="4.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.AspNetUser" Width="1.5" PointX="6.875" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Billing" Width="1.5" PointX="2.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Branch" Width="1.5" PointX="4.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Client" Width="1.5" PointX="5.875" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Country" Width="1.5" PointX="9.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.JobExpens" Width="1.5" PointX="7.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Port" Width="1.5" PointX="9.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.ShippingLine" Width="1.5" PointX="11.375" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CnFModel.Supplier" Width="1.5" PointX="4" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="CnFModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnFModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="CnFModel.FK_Clients_Branch" ManuallyRouted="false" />
+        <AssociationConnector Association="CnFModel.FK_ShippingLines_Branch" ManuallyRouted="false" />
+        <AssociationConnector Association="CnFModel.FK_Ports_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="CnFModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CnFModel.Job" Width="1.5" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="CnFModel.FK_Billings_Job" />
+        <AssociationConnector Association="CnFModel.FK_JObExpenses_Job" />
+        <EntityTypeShape EntityType="CnFModel.UserProfile" Width="1.5" PointX="1.875" PointY="6.375" />
+        <AssociationConnector Association="CnFModel.FK_UserProfile_AspNetUser" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

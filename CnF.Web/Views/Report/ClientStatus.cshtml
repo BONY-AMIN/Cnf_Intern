@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CnF.Domain.ViewModels.ClientStatusViewModel>
+
+@{
+    ViewBag.Title = "ClientStatus";
+    Layout = "~/Views/Shared/_adminView.cshtml";
+}
+
+<h2>ClientStatus</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalValue)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalValue)
+            </td>
+            <td>
+          
+
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="container-" width="150" height="50" margin-top>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+@*@using Chart.Mvc.Extensions
+    @using Chart.Mvc.ComplexChart
+
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    @Html.CreateChart("myCanvas", ViewBag.barChart as BarChart)*@
+
+<canvas id="myChart" width="150" height="50"></canvas>
+
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: @Html.Raw(Json.Encode(ViewBag.xAxis)),
+            datasets: [{
+                label: '# value',
+                data: @Html.Raw(Json.Encode(ViewBag.yAxis)),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+    </div>
